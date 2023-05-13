@@ -9,49 +9,46 @@ def calculating():
     else:
         try:
             int_h = int(h)
-            try:
-                int_w = int(w)
-                bmi = int_w/((int_h / 100) ** 2)
-                if 0 < bmi < 18.5 and int_h > 0 and int_w > 0:
-                    bmi_new = format(bmi, ".2f")
-                    result_label.config(text=f"Your BMI is {bmi_new}. You are under weight")
-                    result_label.pack()
+            int_w = int(w)
+            bmi = int_w/((int_h / 100) ** 2)
+            if 0 < bmi < 18.5 and int_h > 0 and int_w > 0:
+                bmi_new = format(bmi, ".2f")
+                result_label.config(text=f"Your BMI is {bmi_new}. You are under weight")
+                result_label.pack()
 
-                elif 18.5 <= bmi <25 and int_h > 0 and int_w > 0:
-                    bmi_new = format(bmi, ".2f")
-                    result_label.config(text=f"Your BMI is {bmi_new}. You are normal weight")
-                    result_label.pack()
+            elif 18.5 <= bmi <25 and int_h > 0 and int_w > 0:
+                bmi_new = format(bmi, ".2f")
+                result_label.config(text=f"Your BMI is {bmi_new}. You are normal weight")
+                result_label.pack()
 
-                elif 25 <= bmi <30 and int_h > 0 and int_w > 0:
-                    bmi_new = format(bmi, ".2f")
-                    result_label.config(text=f"Your BMI is {bmi_new}. You are over weight")
-                    result_label.pack()
+            elif 25 <= bmi <30 and int_h > 0 and int_w > 0:
+                bmi_new = format(bmi, ".2f")
+                result_label.config(text=f"Your BMI is {bmi_new}. You are over weight")
+                result_label.pack()
 
-                elif 30 <= bmi <35 and int_h > 0 and int_w > 0:
-                    bmi_new = format(bmi, ".2f")
-                    result_label.config(text=f"Your BMI is {bmi_new}. You are Obesity Class I")
-                    result_label.pack()
+            elif 30 <= bmi <35 and int_h > 0 and int_w > 0:
+                bmi_new = format(bmi, ".2f")
+                result_label.config(text=f"Your BMI is {bmi_new}. You are Obesity Class I")
+                result_label.pack()
 
-                elif 35 <= bmi <40 and int_h > 0 and int_w > 0:
-                    bmi_new = format(bmi, ".2f")
-                    result_label.config(text=f"Your BMI is {bmi_new}. You are Obesity Class II")
-                    result_label.pack()
+            elif 35 <= bmi <40 and int_h > 0 and int_w > 0:
+                bmi_new = format(bmi, ".2f")
+                result_label.config(text=f"Your BMI is {bmi_new}. You are Obesity Class II")
+                result_label.pack()
 
-                elif 40 <= bmi and int_h > 0 and int_w > 0:
-                    bmi_new = format(bmi, ".2f")
-                    result_label.config(text=f"Your BMI is {bmi_new}. You are Obesity Class III")
-                    result_label.pack()
+            elif 40 <= bmi and int_h > 0 and int_w > 0:
+                bmi_new = format(bmi, ".2f")
+                result_label.config(text=f"Your BMI is {bmi_new}. You are Obesity Class III")
+                result_label.pack()
 
-                elif bmi < 0 or int_h < 0 or int_w < 0:
-                    result_label.config(text="Entered values can not be negative!")
-                    result_label.pack()
-                else:
-                    result_label.config(text="Calculating is failed. Please try again!")
-                    result_label.pack()
-            except:
-                result_label.config(text="Invalid weight!")
+            elif bmi < 0 or int_h < 0 or int_w < 0:
+                result_label.config(text="Entered values can not be negative!")
+                result_label.pack()
+            else:
+                result_label.config(text="Calculating is failed. Please try again!")
+                result_label.pack()
         except:
-            result_label.config(text="Invalid height!")
+            result_label.config(text="Invalid weight or height!")
 
 
 
